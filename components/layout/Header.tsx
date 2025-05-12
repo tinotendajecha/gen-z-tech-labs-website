@@ -44,7 +44,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link href="/" className="relative z-10 flex items-center gap-2 font-bold text-xl">
             <Zap className="h-6 w-6 text-[#FFD700] dark:text-[#FFB300]" />
-            <span className="font-inter font-bold">GZT<span className="text-[#00C853] dark:text-[#00E676]">Labs</span></span>
+            <span className="font-inter font-bold">Gen Z Tech <span className="text-[#00C853] dark:text-[#00E676]">Labs</span></span>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
@@ -61,18 +61,18 @@ const Header = () => {
               >
                 Why Us
               </Link>
-              <Link 
+              {/* <Link 
                 href="#portfolio" 
                 className="text-sm font-medium hover:text-[#00C853] dark:hover:text-[#00E676] transition-colors"
               >
                 Portfolio
-              </Link>
-              <Link 
+              </Link> */}
+              {/* <Link 
                 href="#testimonials" 
                 className="text-sm font-medium hover:text-[#00C853] dark:hover:text-[#00E676] transition-colors"
               >
                 Testimonials
-              </Link>
+              </Link> */}
               <Link 
                 href="#contact" 
                 className="text-sm font-medium hover:text-[#00C853] dark:hover:text-[#00E676] transition-colors"

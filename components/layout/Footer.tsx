@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Zap className="h-6 w-6 text-[#FFD700] dark:text-[#FFB300]" />
-              <span className="font-inter font-bold text-xl">GZT<span className="text-[#00C853] dark:text-[#00E676]">Labs</span></span>
+              <span className="font-inter font-bold text-xl">Gen Z Tech <span className="text-[#00C853] dark:text-[#00E676]">Labs</span></span>
             </div>
             <p className="text-gray-300 dark:text-gray-400 mb-6">
               Smart solutions for a digital world. We design and build beautiful digital experiences for businesses in Harare and beyond.

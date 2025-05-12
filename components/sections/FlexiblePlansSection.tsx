@@ -87,7 +87,7 @@ const FlexiblePlansSection = () => {
               <div className="flex items-start gap-6 mb-6">
                 <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
                   <Image
-                    src="https://images.pexels.com/photos/3771839/pexels-photo-3771839.jpeg"
+                    src="/images/lady-chef.jpg"
                     alt="Martha M."
                     width={80}
                     height={80}

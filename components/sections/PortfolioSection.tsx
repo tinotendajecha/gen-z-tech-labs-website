@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 interface PortfolioItem {
   id: number;
@@ -11,6 +12,7 @@ interface PortfolioItem {
   category: string;
   image: string;
   description: string;
+  url?: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
@@ -19,46 +21,49 @@ const portfolioItems: PortfolioItem[] = [
     title: "Smart Recruit",
     category: "Web Application",
     image: "https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    description: "An AI-powered recruitment platform"
+    description: "An AI-powered recruitment platform",
+    url: "https://smart-recruit-app.vercel.app/"
   },
   {
     id: 2,
     title: "Municipal Services Portal",
-    category: "Web Design",
+    category: "Web Application",
     image: "https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    description: "Digital services portal for local government"
+    description: "Digital services portal for local government",
+    url: ""
   },
   {
     id: 3,
     title: "Content Streaming App",
-    category: "Mobile App",
-    image: "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    description: "Video streaming platform with e-commerce"
-  },
-  {
-    id: 4,
-    title: "EduMentor LMS",
     category: "Web Application",
-    image: "https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    description: "Learning management system for schools"
+    image: "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    description: "Video streaming platform with e-commerce",
+    url: "https://www.coderedstudios.org/"
   },
-  {
-    id: 5,
-    title: "FarmTrack",
-    category: "Mobile App",
-    image: "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    description: "Farm management and analytics platform"
-  },
-  {
-    id: 6,
-    title: "FixIt App",
-    category: "Mobile App",
-    image: "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    description: "On-demand home repair service platform"
-  }
+  // {
+  //   id: 4,
+  //   title: "EduMentor LMS",
+  //   category: "Web Application",
+  //   image: "https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  //   description: "Learning management system for schools"
+  // },
+  // {
+  //   id: 5,
+  //   title: "FarmTrack",
+  //   category: "Mobile App",
+  //   image: "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  //   description: "Farm management and analytics platform"
+  // },
+  // {
+  //   id: 6,
+  //   title: "FixIt App",
+  //   category: "Mobile App",
+  //   image: "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  //   description: "On-demand home repair service platform"
+  // }
 ];
 
-const categories = ["All", "Web Design", "Web Application", "Mobile App"];
+const categories = ["All", "Web Application", "Web Design", "Mobile App"];
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -138,7 +143,9 @@ const PortfolioSection = () => {
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-gray-200 mb-4">{item.description}</p>
                   <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 transition-all hover:bg-white/40">
+                   <Link href={item.url || "#"} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-5 w-5 text-white" />
+                   </Link>
                   </div>
                 </div>
               </div>

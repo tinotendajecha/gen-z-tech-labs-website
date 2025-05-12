@@ -10,7 +10,8 @@ import {
   Layers, 
   Zap, 
   BarChart2, 
-  MessagesSquare 
+  MessagesSquare ,
+  IconNode
 } from 'lucide-react';
 
 interface TechItem {
@@ -40,7 +41,7 @@ const techStack: TechItem[] = [
     icon: <Database className="h-8 w-8" />,
   },
   {
-    name: "Zapier",
+    name: "n8n",
     icon: <Zap className="h-8 w-8" />,
   },
   {
